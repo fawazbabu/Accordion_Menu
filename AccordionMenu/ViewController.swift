@@ -46,9 +46,7 @@ class ViewController: UIViewController {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        // if ([[arrayForBool objectAtIndex:section] boolValue])
-        //var tp = arrayForBool .objectAtIndex(section).boolValue
-        //println(tp)
+       
         if(arrayForBool .objectAtIndex(section).boolValue == true)
         {
             var tps = sectionTitleArray .objectAtIndex(section) as NSString
