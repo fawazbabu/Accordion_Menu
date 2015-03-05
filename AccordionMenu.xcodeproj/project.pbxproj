@@ -13,6 +13,8 @@
 		CBF3BCFE1AA85C7700DBDE97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF3BCFD1AA85C7700DBDE97 /* Images.xcassets */; };
 		CBF3BD011AA85C7700DBDE97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF3BCFF1AA85C7700DBDE97 /* LaunchScreen.xib */; };
 		CBF3BD0D1AA85C7700DBDE97 /* AccordionMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF3BD0C1AA85C7700DBDE97 /* AccordionMenuTests.swift */; };
+		CBF3BD191AA8648300DBDE97 /* downArrowBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF3BD171AA8648300DBDE97 /* downArrowBlack.png */; };
+		CBF3BD1A1AA8648300DBDE97 /* upArrowBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF3BD181AA8648300DBDE97 /* upArrowBlack.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		CBF3BD061AA85C7700DBDE97 /* AccordionMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccordionMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF3BD0B1AA85C7700DBDE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBF3BD0C1AA85C7700DBDE97 /* AccordionMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionMenuTests.swift; sourceTree = "<group>"; };
+		CBF3BD171AA8648300DBDE97 /* downArrowBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrowBlack.png; sourceTree = "<group>"; };
+		CBF3BD181AA8648300DBDE97 /* upArrowBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrowBlack.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		CBF3BCF31AA85C7700DBDE97 /* AccordionMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CBF3BD161AA8648300DBDE97 /* Images */,
 				CBF3BCF61AA85C7700DBDE97 /* AppDelegate.swift */,
 				CBF3BCF81AA85C7700DBDE97 /* ViewController.swift */,
 				CBF3BCFA1AA85C7700DBDE97 /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				CBF3BD0B1AA85C7700DBDE97 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBF3BD161AA8648300DBDE97 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CBF3BD171AA8648300DBDE97 /* downArrowBlack.png */,
+				CBF3BD181AA8648300DBDE97 /* upArrowBlack.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF3BCFC1AA85C7700DBDE97 /* Main.storyboard in Resources */,
+				CBF3BD191AA8648300DBDE97 /* downArrowBlack.png in Resources */,
 				CBF3BD011AA85C7700DBDE97 /* LaunchScreen.xib in Resources */,
+				CBF3BD1A1AA8648300DBDE97 /* upArrowBlack.png in Resources */,
 				CBF3BCFE1AA85C7700DBDE97 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
