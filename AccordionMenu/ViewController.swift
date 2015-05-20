@@ -24,10 +24,10 @@ class ViewController: UIViewController {
         arrayForBool = ["0","0"]
         sectionTitleArray = ["Pool A","Pool B"]
         var tmp1 : NSArray = ["New Zealand","Australia","Bangladesh","Sri Lanka"]
-        var string1 = sectionTitleArray .objectAtIndex(0) as? NSString
+        var string1 = sectionTitleArray .objectAtIndex(0) as? String
         [sectionContentDict .setValue(tmp1, forKey:string1! )]
         var tmp2 : NSArray = ["India","South Africa","UAE","Pakistan"]
-        string1 = sectionTitleArray .objectAtIndex(1) as? NSString
+        string1 = sectionTitleArray .objectAtIndex(1) as? String
         [sectionContentDict .setValue(tmp2, forKey:string1! )]
         
         
@@ -49,8 +49,8 @@ class ViewController: UIViewController {
        
         if(arrayForBool .objectAtIndex(section).boolValue == true)
         {
-            var tps = sectionTitleArray .objectAtIndex(section) as NSString
-            var count1 = (sectionContentDict .valueForKey(tps)) as NSArray
+            var tps = sectionTitleArray.objectAtIndex(section) as! String
+            var count1 = (sectionContentDict.valueForKey(tps)) as! NSArray
             return count1.count
         }
         return 0;
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         headerView.tag = section
         
         let headerString = UILabel(frame: CGRect(x: 10, y: 10, width: tableView.frame.size.width-10, height: 30)) as UILabel
-        headerString.text = sectionTitleArray.objectAtIndex(section) as NSString
+        headerString.text = sectionTitleArray.objectAtIndex(section) as? String
         headerView .addSubview(headerString)
         
         let headerTapped = UITapGestureRecognizer (target: self, action:"sectionHeaderTapped:")
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
         
         let CellIdentifier = "Cell"
         var cell :UITableViewCell
-        cell = self.tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as UITableViewCell
+        cell = self.tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell
         
         var manyCells : Bool = arrayForBool .objectAtIndex(indexPath.section).boolValue
         
@@ -124,7 +124,7 @@ class ViewController: UIViewController {
             //  cell.textLabel.text = @"click to enlarge";
         }
         else{
-            var content = sectionContentDict .valueForKey(sectionTitleArray.objectAtIndex(indexPath.section) as String) as NSArray
+            var content = sectionContentDict .valueForKey(sectionTitleArray.objectAtIndex(indexPath.section) as! String) as! NSArray
             cell.textLabel?.text = content .objectAtIndex(indexPath.row) as? String
             cell.backgroundColor = UIColor .greenColor()
         }
