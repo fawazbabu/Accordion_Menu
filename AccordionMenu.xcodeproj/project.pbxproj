@@ -170,6 +170,8 @@
 		CBF3BCE91AA85C7700DBDE97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Zaeem Solutions";
 				TargetAttributes = {
@@ -421,6 +423,7 @@
 				CBF3BD121AA85C7700DBDE97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBF3BD131AA85C7700DBDE97 /* Build configuration list for PBXNativeTarget "AccordionMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +432,7 @@
 				CBF3BD151AA85C7700DBDE97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

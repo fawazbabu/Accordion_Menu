@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  AccordionMenu
 //
-//  Created by Lataant on 05/03/15.
+//  Created by Fawaz on 05/03/15.
 //  Copyright (c) 2015 Zaeem Solutions. All rights reserved.
 //
 
@@ -23,12 +23,12 @@ class ViewController: UIViewController {
         
         arrayForBool = ["0","0"]
         sectionTitleArray = ["Pool A","Pool B"]
-        var tmp1 : NSArray = ["New Zealand","Australia","Bangladesh","Sri Lanka"]
+        let countryListA : NSArray = ["New Zealand","Australia","Bangladesh","Sri Lanka"]
         var string1 = sectionTitleArray .objectAtIndex(0) as? String
-        [sectionContentDict .setValue(tmp1, forKey:string1! )]
-        var tmp2 : NSArray = ["India","South Africa","UAE","Pakistan"]
+        [sectionContentDict .setValue(countryListA, forKey:string1! )]
+        let countryListB : NSArray = ["India","South Africa","UAE","Pakistan"]
         string1 = sectionTitleArray .objectAtIndex(1) as? String
-        [sectionContentDict .setValue(tmp2, forKey:string1! )]
+        [sectionContentDict .setValue(countryListB, forKey:string1! )]
         
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
@@ -49,8 +49,8 @@ class ViewController: UIViewController {
        
         if(arrayForBool .objectAtIndex(section).boolValue == true)
         {
-            var tps = sectionTitleArray.objectAtIndex(section) as! String
-            var count1 = (sectionContentDict.valueForKey(tps)) as! NSArray
+            let tps = sectionTitleArray.objectAtIndex(section) as! String
+            let count1 = (sectionContentDict.valueForKey(tps)) as! NSArray
             return count1.count
         }
         return 0;
@@ -94,10 +94,10 @@ class ViewController: UIViewController {
     }
     
     func sectionHeaderTapped(recognizer: UITapGestureRecognizer) {
-        println("Tapping working")
-        println(recognizer.view?.tag)
+        print("Tapping working")
+        print(recognizer.view?.tag)
         
-        var indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection:(recognizer.view?.tag as Int!)!)
+        let indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection:(recognizer.view?.tag as Int!)!)
         if (indexPath.row == 0) {
             
             var collapsed = arrayForBool .objectAtIndex(indexPath.section).boolValue
@@ -105,8 +105,8 @@ class ViewController: UIViewController {
             
             arrayForBool .replaceObjectAtIndex(indexPath.section, withObject: collapsed)
             //reload specific section animated
-            var range = NSMakeRange(indexPath.section, 1)
-            var sectionToReload = NSIndexSet(indexesInRange: range)
+            let range = NSMakeRange(indexPath.section, 1)
+            let sectionToReload = NSIndexSet(indexesInRange: range)
             self.tableView .reloadSections(sectionToReload, withRowAnimation:UITableViewRowAnimation.Fade)
         }
         
@@ -114,17 +114,16 @@ class ViewController: UIViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let CellIdentifier = "Cell"
-        var cell :UITableViewCell
-        cell = self.tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell
+        let cellIdentifier = "Cell"
+        let cell: UITableViewCell! = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
         
-        var manyCells : Bool = arrayForBool .objectAtIndex(indexPath.section).boolValue
+        let manyCells : Bool = arrayForBool .objectAtIndex(indexPath.section).boolValue
         
         if (!manyCells) {
             //  cell.textLabel.text = @"click to enlarge";
         }
         else{
-            var content = sectionContentDict .valueForKey(sectionTitleArray.objectAtIndex(indexPath.section) as! String) as! NSArray
+            let content = sectionContentDict .valueForKey(sectionTitleArray.objectAtIndex(indexPath.section) as! String) as! NSArray
             cell.textLabel?.text = content .objectAtIndex(indexPath.row) as? String
             cell.backgroundColor = UIColor .greenColor()
         }
