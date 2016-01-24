@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(arrayForBool .objectAtIndex(indexPath.section).boolValue == true){
-            return 100
+            return 120
         }
         
         return 2;
